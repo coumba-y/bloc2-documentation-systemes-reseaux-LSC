@@ -4,7 +4,7 @@
 **Formation** : BTS SIO 2ème année - Option SISR  
 **Établissement** : Lycée Paul-Louis Courier, Tours  
 
-[toc]
+
 
 # Listes des commandes qui m'ont aider pour l'installation et le paramétrage d'un serveur Windows 2025 (Machine virtuelle)
 
