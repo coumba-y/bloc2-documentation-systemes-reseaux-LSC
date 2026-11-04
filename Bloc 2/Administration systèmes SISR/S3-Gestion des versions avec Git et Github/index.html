@@ -1,0 +1,1075 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>BLOC 2 - Administration des systèmes - Situation 3 : Gestion des versions avec Git et Github - Travaux de groupe contexte CUB - BTS SIO 2 - SISR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bloc-2-administration-des-systemes-situation-3-gestion-des-versions-avec-git-et-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" class="md-header__button md-logo" aria-label="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Travaux de groupe contexte CUB - BTS SIO 2 - SISR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BLOC 2 - Administration des systèmes - Situation 3 : Gestion des versions avec Git et Github
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" class="md-nav__button md-logo" aria-label="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Travaux de groupe contexte CUB - BTS SIO 2 - SISR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloc 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloc 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration systèmes SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration systèmes SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S1-Préparation de la maquette et premiers paramétrages du serveur Windows 2025" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Préparation de la maquette et premiers paramétrages du serveur Windows 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S2-Installation d'un centre d'administration des serveurs Windows" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d'un centre d'administration des serveurs Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S3-Gestion des versions avec Git et Github" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des versions avec Git et Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration services SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration services SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration services SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration services SISR/S0 - Introduction aux services à mettre en place" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction aux services à mettre en place
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration infrastructure SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration infrastructure SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration infrastructure SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloc 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloc 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cybersécurité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cybersécurité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 3/cybersécurité/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bloc-2-administration-des-systemes-situation-3-gestion-des-versions-avec-git-et-github">BLOC  2 - Administration des systèmes - Situation 3 : Gestion des versions avec Git et Github</h1>
+<p><strong>Compte rendu rédigé par</strong> : BIDANESSY Coumba
+<strong>Formation</strong> : BTS SIO 2ème année - Option SISR<br />
+<strong>Établissement</strong> : Lycée Paul-Louis Courier, Tours  </p>
+<p>[toc]</p>
+<h1 id="tp-git-github-questions-et-reponses">TP Git / GitHub : Questions et réponses</h1>
+<h2 id="partie-1-installation-et-configuration-de-git">Partie 1 : Installation et configuration de Git</h2>
+<p><strong>Question 1 : Relever la version de Git installée.</strong>
+Réponse : <code>git version 2.55.0.5</code> </p>
+<p><strong>Question 2 : Quel est le rôle d'un logiciel de gestion de versions tel que Git ?</strong>
+Il enregistre l'historique des modifications d'un ensemble de fichiers. Il permet de revenir à une version antérieure, de savoir qui a modifié quoi et quand, de comparer des versions, de travailler à plusieurs sans écraser le travail des autres et d'assurer la traçabilité d'un projet.</p>
+<p><strong>Question 3 : Pourquoi Git associe-t-il un nom et une adresse électronique aux commits ?</strong>
+Pour identifier l'auteur de chaque modification. Cela garantit la traçabilité, permet de contacter l'auteur en cas de problème et d'attribuer correctement le travail. GitHub utilise aussi l'adresse e-mail pour relier les commits à un compte.</p>
+<hr />
+<h2 id="partie-2-creation-dun-premier-depot-git">Partie 2 : Création d'un premier dépôt Git</h2>
+<p><strong>Question 4 : Que signifie l'initialisation d'un dépôt Git ?</strong>
+<code>git init</code> crée un dossier caché <code>.git</code> contenant toute la base de données Git (historique, branches, configuration). Le dossier devient alors un dépôt local dont Git peut suivre les fichiers.</p>
+<p><strong>Question 5 : Quel est le rôle de la commande « git status » ?</strong>
+ Elle affiche l'état du dépôt : branche courante, fichiers non suivis, fichiers modifiés non indexés, fichiers indexés prêts à être commités.</p>
+<hr />
+<h2 id="partie-3-creation-des-premieres-versions-du-script">Partie 3 : Création des premières versions du script</h2>
+<p><strong>Question 6 : Quelle différence observez-vous dans « git status » avant et après la commande « git add » ?</strong>
+Avant, le fichier est dans <em>Untracked files</em> (non suivi). Après, il apparaît dans <em>Changes to be committed</em> (mention <code>new file</code>) : il est dans la zone d'indexation, prêt à être commité.</p>
+<p><strong>Question 7 : Qu'est-ce qu'un commit ?</strong>
+Un instantané de l'état des fichiers indexés, enregistré définitivement dans l'historique du dépôt local, avec un identifiant unique (hash), un auteur, une date et un message.</p>
+<p><strong>Question 8 : Pourquoi faut-il utiliser un message de commit précis et explicite ?</strong>
+Pour comprendre ce qui a été modifié et pourquoi, retrouver rapidement une modification dans l'historique, faciliter le travail en équipe et le dépannage.</p>
+<hr />
+<h2 id="partie-4-modification-et-suivi-dun-fichier">Partie 4 : Modification et suivi d'un fichier</h2>
+<p><strong>Question 9 : Que permet d'afficher la commande « git diff » ?</strong>
+Les différences ligne par ligne entre le fichier de travail et la dernière version indexée ou commitée. Les lignes ajoutées sont précédées de <code>+</code>, les lignes supprimées de <code>-</code>.</p>
+<p><strong>Question 10 : Combien de versions du projet sont maintenant présentes dans l'historique ?</strong>
+2 versions (2 commits) : la création du script, puis l'ajout du test TCP/IP local.</p>
+<hr />
+<h2 id="partie-5-comprendre-le-fonctionnement-de-git">Partie 5 : Comprendre le fonctionnement de Git</h2>
+<p><strong>Question 11 : Indiquer le rôle de chacune des commandes : git status, git diff, git add, git commit et git log.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git status</code></td>
+<td>Affiche l'état du dépôt (fichiers non suivis, modifiés, indexés).</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>Montre les différences entre le fichier de travail et la dernière version indexée ou commitée.</td>
+</tr>
+<tr>
+<td><code>git add</code></td>
+<td>Ajoute les modifications à la zone d'indexation.</td>
+</tr>
+<tr>
+<td><code>git commit</code></td>
+<td>Enregistre définitivement le contenu de l'index dans le dépôt local.</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>Affiche l'historique des commits (hash, auteur, date, message).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="partie-6-annulation-dune-modification-non-validee">Partie 6 : Annulation d'une modification non validée</h2>
+<p><strong>Question 12 : Quel est l'intérêt de la commande « git restore » ?</strong>
+Elle annule les modifications non validées d'un fichier et le ramène à son dernier état enregistré. Utile pour corriger une erreur ou abandonner un essai sans toucher à la version stable.</p>
+<p><strong>Question 13 : La modification supprimée avait-elle déjà été enregistrée dans un commit ? Justifier.</strong>
+Non. La ligne <code>Write-Host "TEST INCORRECT"</code> n'avait été ni indexée (<code>git add</code>) ni commitée (<code>git commit</code>) : elle n'existait que dans le répertoire de travail, ce qui a permis à <code>git restore</code> de la supprimer.</p>
+<hr />
+<h2 id="partie-7-decouverte-de-github">Partie 7 : Découverte de GitHub</h2>
+<p><strong>Question 14 : Peut-on utiliser Git sans GitHub ? Justifier.</strong>
+Oui. Git est un outil local, indépendant de tout service en ligne. GitHub n'est qu'une plateforme d'hébergement distant qui s'ajoute à Git.</p>
+<p><strong>Question 15 : Quelle différence faites-vous entre Git et GitHub ?</strong>
+Git est le logiciel de gestion de versions installé sur le poste. GitHub est un service web qui héberge des dépôts Git et ajoute le partage, la collaboration, la gestion des accès et les Pull Requests.</p>
+<p><strong>Question 16 : Quelle différence existe-t-il entre un dépôt public et un dépôt privé ?</strong>
+Un dépôt public est visible et clonable par tout le monde sur Internet. Un dépôt privé n'est visible que par le propriétaire et les personnes qu'il autorise.</p>
+<p><strong>Question 17 : Pourquoi un administrateur systèmes doit-il être vigilant avant de publier un script sur un dépôt public ?</strong>
+Un script peut contenir des informations sensibles (mots de passe, jetons, noms de serveurs, adresses IP) exploitables par des attaquants. De plus, l'historique Git conserve les anciennes versions : une donnée supprimée plus tard reste récupérable.</p>
+<p><strong>Question 18 : Donner trois exemples d'informations qui ne doivent pas être publiées dans un dépôt GitHub.</strong></p>
+<ol>
+<li>Mots de passe et identifiants de comptes.</li>
+<li>Clés d'API, jetons d'accès et clés privées (SSH, certificats).</li>
+<li>Informations internes sur l'infrastructure (adresses IP, noms de serveurs, plan d'adressage).</li>
+</ol>
+<hr />
+<h2 id="partie-8-relier-le-depot-local-au-depot-github">Partie 8 : Relier le dépôt local au dépôt GitHub</h2>
+<p><strong>Question 19 : Que représente le nom « origin » ?</strong>
+C'est l'alias (nom court) du dépôt distant, par convention celui vers lequel on pousse ou d'où l'on a cloné. Il évite de retaper l'URL complète.</p>
+<p><strong>Question 20 : Quelle commande permet d'envoyer les commits locaux vers GitHub ?</strong>
+ <code>git push</code> (ici <code>git push -u origin main</code> la première fois).</p>
+<p><strong>Question 21 : Quelle différence existe-t-il entre « git commit » et « git push » ?</strong>
+<code>git commit</code> enregistre une version dans le dépôt local. <code>git push</code> envoie les commits locaux vers le dépôt distant (GitHub).</p>
+<hr />
+<h2 id="partie-9-modification-et-synchronisation-avec-github">Partie 9 : Modification et synchronisation avec GitHub</h2>
+<p><strong>Question 22 : Avant d'exécuter « git push », cette modification est-elle déjà visible sur GitHub ? Pourquoi ?</strong>
+ Non. Le commit n'existe que dans le dépôt local ; GitHub ne reçoit que ce qui est envoyé par <code>git push</code>.</p>
+<hr />
+<h2 id="partie-10-recuperation-et-mise-a-jour-dun-depot">Partie 10 : Récupération et mise à jour d'un dépôt</h2>
+<p><strong>Question 23 : Quelle différence faites-vous entre « git init » et « git clone » ?</strong>
+<code>git init</code> crée un nouveau dépôt vide dans un dossier local. <code>git clone</code> copie un dépôt distant existant avec tout son historique et configure automatiquement <code>origin</code>.</p>
+<p><strong>Question 24 : Pourquoi est-il important de récupérer les dernières modifications avant de commencer à travailler sur un projet partagé ?</strong>
+Pour partir de la version la plus récente, éviter de travailler sur une base obsolète, et prévenir les conflits ou le refus d'un <code>git push</code> dû à un dépôt distant ayant évolué.</p>
+<hr />
+<h2 id="partie-11-extension-travail-avec-des-branches">Partie 11 : Extension : travail avec des branches</h2>
+<p><strong>Question 25 : Comment Git indique-t-il la branche actuellement utilisée ?</strong>
+Par un astérisque <code>*</code> devant le nom de la branche dans <code>git branch</code>. <code>git status</code> l'indique aussi (<code>On branch ...</code>), ainsi que <code>(HEAD -&gt; ...)</code> dans <code>git log</code>.</p>
+<p><strong>Question 26 : Quel est l'intérêt de travailler dans une branche plutôt que directement dans « main » ?</strong>
+Développer une évolution de façon isolée sans risquer de casser la version stable, permettre un travail en parallèle, pouvoir abandonner un essai, et ne fusionner qu'après validation.</p>
+<hr />
+<h2 id="partie-12-modifier-le-projet-dans-une-branche">Partie 12 : Modifier le projet dans une branche</h2>
+<p><strong>Question 27 : La modification réalisée dans « feature-diagnostic-dns » est-elle présente dans « main » ? Pourquoi ?</strong>
+Non. Le commit appartient uniquement à la branche <code>feature-diagnostic-dns</code>. Tant qu'elle n'est pas fusionnée, <code>main</code> ne le contient pas.</p>
+<hr />
+<h2 id="partie-13-fusion-dune-branche">Partie 13 : Fusion d'une branche</h2>
+<p><strong>Question 28 : Quel est le rôle de la commande « git merge » ?</strong>
+Elle intègre dans la branche courante les commits d'une autre branche, en réunissant deux lignes de développement (fast-forward ou commit de fusion).</p>
+<hr />
+<h2 id="partie-14-publier-une-branche-et-utiliser-une-pull-request">Partie 14 : Publier une branche et utiliser une Pull Request</h2>
+<p><strong>Question 29 : La branche apparaît-elle maintenant sur GitHub ?</strong>
+Oui, grâce à <code>git push -u origin feature-informations-systeme</code>. Elle est visible dans la liste des branches et GitHub propose « Compare &amp; pull request ».</p>
+<p><strong>Question 30 : Quelle différence existe-t-il entre une branche uniquement locale et une branche publiée sur GitHub ?</strong>
+Une branche locale n'existe que sur le poste (ni sauvegardée, ni visible par les autres). Une branche publiée existe aussi sur <code>origin</code> : elle est sauvegardée, partageable et utilisable pour une Pull Request.</p>
+<p><strong>Question 31 : Quel est l'intérêt d'une Pull Request ?</strong>
+Proposer l'intégration d'une branche dans une autre de façon encadrée : visualiser les changements, les commenter, les faire relire et valider avant fusion, avec une trace de la discussion.</p>
+<p><strong>Question 32 : Pourquoi est-il préférable de faire vérifier une modification avant son intégration dans « main » ?</strong>
+Pour garder <code>main</code> stable, détecter erreurs, mauvaises pratiques ou fuites d'informations sensibles avant la version de référence, et valider le travail en équipe.</p>
+<hr />
+<h2 id="partie-15-extension-comprendre-un-conflit-de-fusion">Partie 15 : Extension : comprendre un conflit de fusion</h2>
+<p><strong>Question 33 : Pourquoi Git ne choisit-il pas automatiquement une des deux versions ?</strong>
+Les deux branches ont modifié la même ligne. Git ne peut pas deviner l'intention des auteurs (garder l'une, l'autre ou une combinaison) et risquerait d'écraser un travail légitime.</p>
+<p><strong>Question 34 : Qui doit décider du contenu à conserver ?</strong>
+L'administrateur qui réalise la fusion, éventuellement avec l'auteur de l'autre modification. Il édite le fichier, supprime les marqueurs <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> et garde le contenu voulu.</p>
+<p><strong>Question 35 : Après correction manuelle du conflit, quelles opérations Git permettent d'enregistrer la résolution ?</strong>
+Réponse :</p>
+<pre><code class="language-bash">git add diagnostic-reseau.ps1   # marque le conflit comme résolu
+git commit                      # crée le commit de fusion
+</code></pre>
+<hr />
+<h2 id="partie-16-synthese">Partie 16 : Synthèse</h2>
+<p><strong>36. Compléter le rôle des commandes suivantes :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git init</code></td>
+<td>Initialise un nouveau dépôt Git local dans le dossier courant.</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>Affiche l'état du dépôt (branche, fichiers modifiés, indexés ou non suivis).</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>Affiche les différences entre le fichier de travail et la dernière version indexée ou commitée.</td>
+</tr>
+<tr>
+<td><code>git add</code></td>
+<td>Ajoute les modifications à la zone d'indexation avant le commit.</td>
+</tr>
+<tr>
+<td><code>git commit</code></td>
+<td>Enregistre les modifications indexées dans le dépôt local avec un message.</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>Affiche l'historique des commits en une ligne par commit.</td>
+</tr>
+<tr>
+<td><code>git restore</code></td>
+<td>Annule les modifications non validées d'un fichier.</td>
+</tr>
+<tr>
+<td><code>git clone</code></td>
+<td>Copie un dépôt distant sur le poste avec tout son historique.</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Récupère les commits du dépôt distant et les fusionne dans la branche locale.</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Envoie les commits locaux vers le dépôt distant.</td>
+</tr>
+<tr>
+<td><code>git branch</code></td>
+<td>Liste, crée ou renomme des branches (la branche active est marquée <code>*</code>).</td>
+</tr>
+<tr>
+<td><code>git switch</code></td>
+<td>Change de branche (<code>-c</code> pour créer puis basculer).</td>
+</tr>
+<tr>
+<td><code>git merge</code></td>
+<td>Fusionne les commits d'une autre branche dans la branche courante.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>37. Expliquer en quelques lignes la différence entre Git, GitHub, un commit, une branche, une fusion et une Pull Request.</strong>
+- <strong>Git</strong> : logiciel local de gestion de versions décentralisé.
+- <strong>GitHub</strong> : plateforme web d'hébergement de dépôts Git, avec partage, collaboration et Pull Requests.
+- <strong>Commit</strong> : instantané enregistré de l'état des fichiers, avec auteur, date et message.
+- <strong>Branche</strong> : ligne de développement parallèle et isolée.
+- <strong>Fusion</strong> : intégration des modifications d'une branche dans une autre.
+- <strong>Pull Request</strong> : demande, sur GitHub, d'intégrer une branche dans une autre avec relecture et validation.</p>
+<p><strong>38. Un administrateur exécute « git add . » puis « git commit », mais oublie « git push ». Les autres administrateurs peuvent-ils voir ce commit sur GitHub ? Justifier.</strong>
+Non. Le commit n'est enregistré que dans son dépôt local. GitHub ne reçoit que ce qui est envoyé par <code>git push</code> : sans cette commande, le travail n'est ni partagé ni sauvegardé à distance.</p>
+<p><strong>39. Un administrateur doit développer une fonctionnalité qui n'est pas encore validée. Doit-il modifier directement « main » ou créer une branche dédiée ? Justifier.</strong>
+ Il doit créer une branche dédiée (<code>git switch -c feature-...</code>). <code>main</code> reste ainsi stable ; on peut tester ou abandonner la fonctionnalité sans risque, la faire relire via une Pull Request et travailler en parallèle avec d'autres personnes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

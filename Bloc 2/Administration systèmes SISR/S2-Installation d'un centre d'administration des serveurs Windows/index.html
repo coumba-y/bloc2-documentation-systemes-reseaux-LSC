@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>BLOC 2 - Administration des systèmes - Situation 2 : Installation d'un centre d'administration des serveurs Windows (WAC) - Travaux de groupe contexte CUB - BTS SIO 2 - SISR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bloc-2-administration-des-systemes-situation-2-installation-dun-centre-dadministration-des-serveurs-windows-wac" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" class="md-header__button md-logo" aria-label="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Travaux de groupe contexte CUB - BTS SIO 2 - SISR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BLOC 2 - Administration des systèmes - Situation 2 : Installation d'un centre d'administration des serveurs Windows (WAC)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" class="md-nav__button md-logo" aria-label="Travaux de groupe contexte CUB - BTS SIO 2 - SISR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Travaux de groupe contexte CUB - BTS SIO 2 - SISR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloc 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloc 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration systèmes SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration systèmes SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S1-Préparation de la maquette et premiers paramétrages du serveur Windows 2025" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Préparation de la maquette et premiers paramétrages du serveur Windows 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S2-Installation d'un centre d'administration des serveurs Windows" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d'un centre d'administration des serveurs Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration systèmes SISR/S3-Gestion des versions avec Git et Github" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des versions avec Git et Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration services SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration services SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration services SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration services SISR/S0 - Introduction aux services à mettre en place" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction aux services à mettre en place
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration infrastructure SISR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration infrastructure SISR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 2/Administration infrastructure SISR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloc 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloc 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cybersécurité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cybersécurité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Bloc 3/cybersécurité/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bloc-2-administration-des-systemes-situation-2-installation-dun-centre-dadministration-des-serveurs-windows-wac">BLOC  2 - Administration des systèmes - Situation 2 : Installation d'un centre d'administration des serveurs Windows (WAC)</h1>
+<p><strong>Compte rendu rédigé par</strong> : BIDANESSY Coumba
+<strong>Formation</strong> : BTS SIO 2ème année - Option SISR<br />
+<strong>Établissement</strong> : Lycée Paul-Louis Courier, Tours  </p>
+<p>[toc]</p>
+<h1 id="installation-dun-serveur-windows-admin-center-wac">Installation d'un serveur Windows Admin Center (WAC)</h1>
+<h2 id="objectif">Objectif</h2>
+<p>Déployer un serveur <strong>Windows Admin Center (WAC)</strong> sur une machine virtuelle Proxmox afin d'administrer les serveurs Windows de l'infrastructure depuis une interface web sécurisée.</p>
+<hr />
+<h1 id="1-creation-de-la-machine-virtuelle">1. Création de la machine virtuelle</h1>
+<p>Créer une machine virtuelle <strong>Windows Server 2025</strong> dans Proxmox avec une configuration adaptée :</p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom de la VM</td>
+<td>SRV-WAC</td>
+</tr>
+<tr>
+<td>Système d'exploitation</td>
+<td>Windows Server 2025 x64</td>
+</tr>
+<tr>
+<td>BIOS</td>
+<td>UEFI (OVMF)</td>
+</tr>
+<tr>
+<td>Disque</td>
+<td>60 Go minimum</td>
+</tr>
+<tr>
+<td>Processeur</td>
+<td>2 vCPU minimum</td>
+</tr>
+<tr>
+<td>Mémoire</td>
+<td>4 Go minimum</td>
+</tr>
+<tr>
+<td>Carte réseau</td>
+<td>VirtIO reliée au bridge du réseau</td>
+</tr>
+</tbody>
+</table>
+<p>Installer Windows Server ainsi que les pilotes <strong>VirtIO</strong> pour le disque et la carte réseau.</p>
+<hr />
+<h1 id="2-configuration-reseau-des-serveurs">2. Configuration réseau des serveurs</h1>
+<p>Attribuer une adresse IP fixe à chaque serveur du réseau en suivant un plan d'adressage cohérent.</p>
+<table>
+<thead>
+<tr>
+<th>Serveur</th>
+<th>Rôle</th>
+<th>Adresse IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ServeurADO</td>
+<td>Contrôleur de domaine principal (Active Directory / DNS)</td>
+<td><strong>192.168.1.1</strong></td>
+</tr>
+<tr>
+<td>AD1</td>
+<td>Contrôleur de domaine secondaire</td>
+<td><strong>192.168.1.2</strong></td>
+</tr>
+<tr>
+<td>AD2</td>
+<td>Contrôleur de domaine supplémentaire</td>
+<td><strong>192.168.1.3</strong></td>
+</tr>
+<tr>
+<td>DHCP0</td>
+<td>Serveur DHCP principal</td>
+<td><strong>192.168.1.4</strong></td>
+</tr>
+<tr>
+<td>DHCP1</td>
+<td>Serveur DHCP secondaire</td>
+<td><strong>192.168.1.5</strong></td>
+</tr>
+<tr>
+<td>DHCP2</td>
+<td>Serveur DHCP supplémentaire</td>
+<td><strong>192.168.1.6</strong></td>
+</tr>
+<tr>
+<td>SRV-WAC</td>
+<td>Serveur Windows Admin Center</td>
+<td><strong>192.168.1.9</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-reseau-du-serveur-wac">Configuration réseau du serveur WAC</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adresse IP</td>
+<td>192.168.1.9</td>
+</tr>
+<tr>
+<td>Masque</td>
+<td>255.255.255.128</td>
+</tr>
+<tr>
+<td>Passerelle</td>
+<td>192.168.1.126</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="3-renommage-du-serveur">3. Renommage du serveur</h1>
+<p>Renommer la machine avant son intégration au domaine.</p>
+<pre><code class="language-powershell">Rename-Computer -NewName &quot;SRV-WAC&quot; -Restart
+</code></pre>
+<p>Après le redémarrage, vérifier le nom du serveur.</p>
+<hr />
+<h1 id="5-installation-de-windows-admin-center">5. Installation de Windows Admin Center</h1>
+<p>Télécharger puis lancer le programme d'installation de <strong>Windows Admin Center</strong>.</p>
+<p>Choisir les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode d'installation</td>
+<td>Gateway</td>
+</tr>
+<tr>
+<td>Port HTTPS</td>
+<td>443</td>
+</tr>
+<tr>
+<td>Certificat</td>
+<td>Certificat auto-signé</td>
+</tr>
+<tr>
+<td>Service Windows</td>
+<td>Activé</td>
+</tr>
+<tr>
+<td>Démarrage du service</td>
+<td>Automatique</td>
+</tr>
+</tbody>
+</table>
+<p>Attendre la fin de l'installation.</p>
+<hr />
+<h1 id="6-verification-du-service-wac">6. Vérification du service WAC</h1>
+<p>Contrôler que le service Windows Admin Center est démarré.</p>
+<pre><code class="language-powershell">Get-Service ServerManagementGateway
+</code></pre>
+<p>Si le service est arrêté :</p>
+<pre><code class="language-powershell">Start-Service ServerManagementGateway
+</code></pre>
+<p>Le statut attendu est <strong>Running</strong>.</p>
+<hr />
+<h1 id="7-autorisation-du-pare-feu">7. Autorisation du pare-feu</h1>
+<p>Autoriser le trafic HTTPS vers Windows Admin Center.</p>
+<pre><code class="language-powershell">New-NetFirewallRule `
+-DisplayName &quot;Windows Admin Center HTTPS&quot; `
+-Direction Inbound `
+-Protocol TCP `
+-LocalPort 443 `
+-Action Allow
+</code></pre>
+<p>Vérifier la règle créée.</p>
+<pre><code class="language-powershell">Get-NetFirewallRule -DisplayName &quot;Windows Admin Center HTTPS&quot;
+</code></pre>
+<hr />
+<h1 id="8-acces-a-windows-admin-center">8. Accès à Windows Admin Center</h1>
+<p>Depuis un navigateur d'un poste du réseau, accéder à l'interface :</p>
+<pre><code class="language-text">https://192.168.1.9
+</code></pre>
+<p>Accepter le certificat auto-signé si nécessaire puis se connecter avec un compte administrateur.</p>
+<hr />
+<h1 id="9-ajout-des-serveurs-dans-windows-admin-center">9. Ajout des serveurs dans Windows Admin Center</h1>
+<p>Ajouter les serveurs de l'infrastructure afin de les administrer depuis WAC.</p>
+<table>
+<thead>
+<tr>
+<th>Serveur</th>
+<th>Adresse IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADO</td>
+<td>192.168.1.1</td>
+</tr>
+<tr>
+<td>AD1</td>
+<td>192.168.1.2</td>
+</tr>
+<tr>
+<td>AD2</td>
+<td>192.168.1.3</td>
+</tr>
+<tr>
+<td>DHCP0</td>
+<td>192.168.1.4</td>
+</tr>
+<tr>
+<td>DHCP1</td>
+<td>192.168.1.5</td>
+</tr>
+<tr>
+<td>DHCP2</td>
+<td>192.168.1.6</td>
+</tr>
+</tbody>
+</table>
+<p>Pour chaque serveur :</p>
+<ol>
+<li>Cliquer sur <strong>Ajouter</strong>.</li>
+<li>Sélectionner <strong>Serveur</strong>.</li>
+<li>Saisir le nom ou l'adresse IP.</li>
+<li>Utiliser un compte administrateur du domaine.</li>
+<li>Valider l'ajout.</li>
+</ol>
+<p>Les serveurs apparaissent ensuite dans le tableau de bord de Windows Admin Center.</p>
+<hr />
+<h1 id="verifications-finales">Vérifications finales</h1>
+<table>
+<thead>
+<tr>
+<th>Vérification</th>
+<th>Résultat attendu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ping entre les serveurs</td>
+<td>Connectivité réseau fonctionnelle.</td>
+</tr>
+<tr>
+<td>Service <code>ServerManagementGateway</code></td>
+<td>Running.</td>
+</tr>
+<tr>
+<td>Accès HTTPS</td>
+<td>Interface WAC accessible sur <code>https://192.168.1.9</code>.</td>
+</tr>
+<tr>
+<td>Gestion des serveurs</td>
+<td>ADO, AD1, AD2, DHCP0, DHCP1 et DHCP2 visibles dans WAC.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
