@@ -4,7 +4,6 @@
 **Formation** : BTS SIO 2ème année - Option SISR  
 **Établissement** : Lycée Paul-Louis Courier, Tours  
 
-[toc]
 
 # Installation d'un serveur Windows Admin Center (WAC)
 
